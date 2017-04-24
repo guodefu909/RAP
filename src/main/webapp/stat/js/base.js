@@ -3420,7 +3420,7 @@ $(function () {
 		</div>\
 		<div class="mask" style="width: 100px; height: 100px;">\
 		</div>\
-		<img src="/stat/img/yellow.png" width="100""/>\
+		<img src="/RAP/stat/img/yellow.png" width="100""/>\
 	</div>';
 
     var helpText = '<div>- 不会用RAP？RAP 5分钟介绍视频在 <a href="http://cloud.video.taobao.com//play/u/11051796/p/1/e/1/t/1/11622279.swf" target="_blank">这里</a></div>\

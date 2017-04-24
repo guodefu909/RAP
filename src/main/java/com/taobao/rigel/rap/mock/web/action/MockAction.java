@@ -24,7 +24,7 @@ import java.util.Map;
 public class MockAction extends ActionBase {
 
     private static final org.apache.logging.log4j.Logger logger = LogManager.getFormatterLogger(MockAction.class.getName());
-    private int id;
+    private int ID;
     private int __id__;
     private String pattern;
     private String mockData;
@@ -159,12 +159,12 @@ public class MockAction extends ActionBase {
         this.content = content;
     }
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int id) {
+        this.ID = id;
     }
 
     public String getPattern() {
@@ -208,6 +208,7 @@ public class MockAction extends ActionBase {
     }
 
     public String createRule() throws UnsupportedEncodingException {
+    	logger.info("action:createRule");
         String callback = getCallback();
         boolean isJSON = false;
         updateProjectListMockNum(SystemVisitorLog.mock(__id__, "createRule", pattern, getCurAccount()));
@@ -215,6 +216,8 @@ public class MockAction extends ActionBase {
         String _c = get_c();
         options.put("method", getMethod());
         String result = mockMgr.generateRule(__id__, pattern, options);
+        logger.info("result:"+result);
+        logger.info("callback:"+callback);
         if (options.get("callback") != null) {
             _c = (String) options.get("callback");
             callback = (String) options.get("callback");
@@ -227,6 +230,9 @@ public class MockAction extends ActionBase {
             isJSON = true;
             setContent(result);
         }
+        logger.info("mock:"+this);
+        logger.info("content:"+getContent());
+        logger.info("isJSON:"+isJSON);
         if (isJSON) {
             return "json";
         } else {
@@ -266,10 +272,10 @@ public class MockAction extends ActionBase {
     public String createRuleByActionData() throws UnsupportedEncodingException {
         String callback = getCallback();
         boolean isJSON = false;
-        updateProjectListMockNum(SystemVisitorLog.mock(id, "createRuleByActionData", pattern, getCurAccount()));
+        updateProjectListMockNum(SystemVisitorLog.mock(ID, "createRuleByActionData", pattern, getCurAccount()));
         Map<String, Object> options = new HashMap<String, Object>();
         String _c = get_c();
-        String result = mockMgr.generateRule(id, pattern, options);
+        String result = mockMgr.generateRule(ID, pattern, options);
         if (options.get("callback") != null) {
             _c = (String) options.get("callback");
             callback = (String) options.get("callback");
@@ -300,7 +306,7 @@ public class MockAction extends ActionBase {
     }
 
     public String createPluginScript() {
-        updateProjectListMockNum(SystemVisitorLog.mock(id, "createPluginScript", pattern, getCurAccount()));
+        updateProjectListMockNum(SystemVisitorLog.mock(ID, "createPluginScript", pattern, getCurAccount()));
         Map<String, Boolean> _circleRefProtector = new HashMap<String, Boolean>();
         List<String> list = new ArrayList<String>();
         Project p = projectMgr.getProject(projectId);
@@ -354,6 +360,7 @@ public class MockAction extends ActionBase {
     }
 
     public String createMockjsData() throws UnsupportedEncodingException {
+    	logger.info("action:createMockjsData");
         String callback = getCallback();
         boolean isJSON = false;
         updateProjectListMockNum(SystemVisitorLog.mock(__id__, "createMockjsData", pattern, getCurAccount()));
@@ -361,6 +368,8 @@ public class MockAction extends ActionBase {
         Map<String, Object> options = new HashMap<String, Object>();
         options.put("method", getMethod());
         String result = mockMgr.generateRuleData(__id__, pattern, options);
+        logger.info("result:"+result);
+        logger.info("callback:"+callback);
         if (options.get("callback") != null) {
             _c = (String) options.get("callback");
             callback = (String) options.get("callback");
@@ -373,7 +382,9 @@ public class MockAction extends ActionBase {
             isJSON = true;
             setContent(result);
         }
-
+        logger.info("mockdata:"+this.mockData);
+        logger.info("content:"+getContent());
+        logger.info("isJSON:"+isJSON);
         if (isJSON) {
             return "json";
         } else {
@@ -413,7 +424,7 @@ public class MockAction extends ActionBase {
     public String validateAPI() throws UnsupportedEncodingException {
         String callback = getCallback();
         boolean isJSON = false;
-        updateProjectListMockNum(SystemVisitorLog.mock(id, "createRule", pattern, getCurAccount()));
+        updateProjectListMockNum(SystemVisitorLog.mock(ID, "createRule", pattern, getCurAccount()));
         Map<String, Object> options = new HashMap<String, Object>();
         String _c = get_c();
         options.put("method", getMethod());

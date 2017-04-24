@@ -2,48 +2,48 @@
     var URLS = {
         org: {
             home: {
-                'projects': '/org/projects.do',
-                'productlines': '/org/home/productlines.do',
-                'groups': '/org/home/groups.do',
-                'grouplist': '/org/group/groups.do'
+                'projects': '/RAP/org/projects.do',
+                'productlines': '/RAP/org/home/productlines.do',
+                'groups': '/RAP/org/home/groups.do',
+                'grouplist': '/RAP/org/group/groups.do'
             },
             group: {
-                'all': '/org/group/all.do',
-                'update': '/org/group/update.do',
-                'delete': '/org/group/delete.do',
-                'create': '/org/group/create.do'
+                'all': '/RAP/org/group/all.do',
+                'update': '/RAP/org/group/update.do',
+                'delete': '/RAP/org/group/delete.do',
+                'create': '/RAP/org/group/create.do'
             },
             productline: {
-                'all': '/org/productline/all.do',
-                'update': '/org/productline/update.do',
-                'delete': '/org/productline/delete.do',
-                'create': '/org/productline/create.do'
+                'all': '/RAP/org/productline/all.do',
+                'update': '/RAP/org/productline/update.do',
+                'delete': '/RAP/org/productline/delete.do',
+                'create': '/RAP/org/productline/create.do'
             },
             project: {
-                'create': '/project/create.do',
-                'delete': '/project/delete.do',
-                'update': '/project/update.do',
-                'search': '/project/search.do'
+                'create': '/RAP/project/create.do',
+                'delete': '/RAP/project/delete.do',
+                'update': '/RAP/project/update.do',
+                'search': '/RAP/project/search.do'
             },
             account: {
-                'all': '/account/all.action'
+                'all': '/RAP/account/all.action'
             },
             team: {
-                'create': '/org/team/create.do',
-                'changeAccessType': '/org/team/changeAccessType.do',
-                'deleteMember': '/org/team/deleteMember.do',
-                'addMembers': '/org/team/addMembers.do',
-                'update': '/org/team/update.do'
+                'create': '/RAP/org/team/create.do',
+                'changeAccessType': '/RAP/org/team/changeAccessType.do',
+                'deleteMember': '/RAP/org/team/deleteMember.do',
+                'addMembers': '/RAP/org/team/addMembers.do',
+                'update': '/RAP/org/team/update.do'
             }
         },
         workspace: {
-            'mine': '/workspace/myWorkspace.do'
+            'mine': '/RAP/workspace/myWorkspace.do'
         },
         notify: {
-            'unread': '/account/getUnreadNotificationList.do',
-            'clear': '/account/clearUnreadNotifications.do',
-            'all': '/account/getNotificationList.do',
-            'delete': '/account/readAllNotification.do'
+            'unread': '/RAP/account/getUnreadNotificationList.do',
+            'clear': '/RAP/account/clearUnreadNotifications.do',
+            'all': '/RAP/account/getNotificationList.do',
+            'delete': '/RAP/account/readAllNotification.do'
         }
     };
 
@@ -332,7 +332,7 @@ $(function () {
             $(this).parents('li').toggleClass('open');
         })
         con.find('.set-btn').click(function () {
-            window.location.href = '/account/mySetting.action';
+            window.location.href = '/RAP/account/mySetting.action';
         })
 
         con.delegate('button.close', 'click', function (e) {

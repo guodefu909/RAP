@@ -174,7 +174,7 @@
                                                 </div>http://rap.xintuzaojiu.com/org/index.do
                                             </div> -->
                                             <input name="kaptcha" class="form-control" type="text" value="" placeholder="请输入验证码" style="width:200px;margin-top:10px;">
-                                            <img src="/Kaptcha.jpg" onclick="this.src='/Kaptcha.jpg?' + Math.random()" style="margin-top: 5px;">
+                                            <img src="/RAP/Kaptcha.jpg" onclick="this.src='/RAP/Kaptcha.jpg?' + Math.random()" style="margin-top: 5px;">
                                             <div style="margin-top: 10px;">
                                                 <button type="submit" class="btn btn-primary" id="login-btn">登录</button>
                                                 <button type="button" class="btn btn-default" id="cancel-login-btn"
@@ -212,7 +212,7 @@
                                                    type="password" placeholder="密码确认" required name="passwordConfirm"
                                                    id="register-password-confirm">
                                             <input name="kaptcha" class="form-control" type="text" value="" placeholder="请输入验证码" style="width:200px;margin-top:10px;">
-                                            <img src="/Kaptcha.jpg" onclick="this.src='/Kaptcha.jpg?' + Math.random()" style="margin-top: 5px;">
+                                            <img src="/RAP/Kaptcha.jpg" onclick="this.src='/RAP/Kaptcha.jpg?' + Math.random()" style="margin-top: 5px;">
 
                                             <div style="margin-top: 10px;">
                                                 <button type="submit" class="btn btn-primary" id="register-btn">注册
@@ -256,8 +256,9 @@
             <span style="margin-left: 10px;">
                 感谢<a href="https://www.aliyun.com/" target="_blank">阿里云</a>赞助
             </span>
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            <!--<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cspan id='cnzz_stat_icon_5879641'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D5879641%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+        	-->
         </p>
     </footer>
     <script>

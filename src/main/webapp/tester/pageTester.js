@@ -67,7 +67,7 @@ YUI().use('handlebars', 'node', 'event', 'jsonp', 'jsonp-url', 'json-stringify',
             log('request starting, url: ' + color(wrapHref(url), LIGHT_GRAY));
             Y.timeLog.time = new Date().getTime();
             try {
-                Y.jsonp(rapUrl, {
+                Y.jsonp(url, {
                     on: {
                         success: function (response) {
                             testResHandler.apply(this, [response])
